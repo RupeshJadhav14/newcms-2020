@@ -1,0 +1,66 @@
+.custom-table{width:100%; border-left: 1px solid #f1f1f1;}
+.custom-table thead, .custom-table th{background-color: #d8e4ea;}
+.custom-table tr{background-color: #fff;}
+.custom-table tr:nth-child(odd), .custom-table tr.odd{    background-color: #f9f9f9;}
+.custom-table tr td, .custom-table tr th{color: #333333;line-height: 20px;border-right: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;     padding: 15px;}
+.custom-table tr td.pageName { position:relative;
+    font-weight: 600;
+    color: #0073aa;
+    text-align: left;
+}
+
+
+/* css only for hover effect all hover effect must write in this Media query */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Custome responsive css start from here */
+
+/* common css for below screen 1199 */
+@media only screen and (max-width: 1199px) {}
+
+/* common css for below screen 991 */
+@media only screen and (max-width: 991px) {
+
+}
+
+/* common css for below screen 767 */
+@media only screen and (max-width: 767px) {
+.hide-mobile{display:none !important;}
+.custom-table tr{float: left; width: 100%;padding: 10px 15px 20px 45px; position: relative; border-bottom:1px solid #e2e2e2}
+.custom-table tr td{border:none; width:100%; display:none; padding:0; margin-top:15px; text-align:left;}
+.custom-table tr td.chekMain, .custom-table tr td.pageName{display:block;}
+.custom-table tr td.chekMain {width: 25px; position: absolute;left: 15px; top: 10px;}
+.custom-table tr.is-expanded td{display:block;}
+.custom-table tr > td:before { float: left; display: inline-block; content: attr(data-title);width: auto;padding-right: 10px; color: #333333; font-size:14px;}
+	
+	}
+
+
+/* common css for below screen 479 */
+@media only screen and (max-width: 479px) {}
+
+
+/* common css for screen size between 480 to 767 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+
+/* common css for screen size between 568 to 767 */
+@media only screen and (min-width: 568px) and (max-width: 767px) {}
+
+
+/* common css for screen size between 600 to 767 */
+@media only screen and (min-width: 600px) and (max-width: 767px) {}
+
+
+/* common css for screen size between 768 to 1199 */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {}
+
+
+/* common css for screen size between 768 to 1023 */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+
+/* common css for screen size between 1024 to 1199 */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}

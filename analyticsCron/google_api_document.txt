@@ -1,0 +1,59 @@
+Follow below steps to integrate google analytics API in site
+=============================================================
+
+- Create Project in developer consol
+https://console.developers.google.com
+
+- Enable Google API service. Enable "Analytic API".
+https://console.developers.google.com/project/aqueous-flight-810/apiui/api
+
+- Get OAuth credentials from developer consol. Select "Web Application" from Application Type poup
+https://console.developers.google.com/project/aqueous-flight-810/apiui/credential
+
+- put "analyticsCron" folder in your project
+
+- Open "config.php" file and add following config variables. replace its value with your project value
+
+-------------------------------------------------------------------------------
+		/**
+		 * Google analytic project client id. Get it from https://console.developers.google.com/project/aqueous-flight-810/apiui/credential
+		 * @var $googleClientId String
+		 */
+                public static $googleClientId = "753972924160-cnv724un3caj6ohiq6f04vo3ji8e93vr.apps.googleusercontent.com";
+                
+                /**
+		 * Google analytic project email id. Get it from https://console.developers.google.com/project/aqueous-flight-810/apiui/credential
+		 * @var $googleEmailId String
+		 */
+                public static $googleEmailId = "753972924160-cnv724un3caj6ohiq6f04vo3ji8e93vr@developer.gserviceaccount.com";
+                
+                /**
+		 * Google analytic project Secret Key. Get it from https://console.developers.google.com/project/aqueous-flight-810/apiui/credential
+		 * @var $googleSecretKey String
+		 */
+                public static $googleSecretKey = "3E6ETXlZjUSyXPuCnolE9OMl";
+                
+                /**
+		 * Google analytic project Redirect URL. Get it from https://console.developers.google.com/project/aqueous-flight-810/apiui/credential
+		 * @var $googleRedirectURL String
+		 */
+                public static $googleRedirectURL = "https://www.hairhealthandbeautyprofessional.com.au/crons/get_current_analytic_feed.php";
+                
+                /**
+		 * Google analytic site view id. Get it from URL of analytics. e.g. https://www.google.com/analytics/web/?hl=en#report/visitors-overview/a56217106w89604906p93124716/ - "93124716" is table id from URL
+		 * @var $google_tableId String
+		 */
+                public static $google_tableId="ga:8589073";
+                
+                /**
+		 * Google analytic site profile id.
+		 * @var $google_profileId String
+		 */
+                public static $google_profileId="8589073";
+-----------------------------------------------------------------------------------------------------------------
+
+- Make sure database have "dtm_configuration" table. It is used to store access token for future use.
+
+- After setting correct values in config variables once run cron in browser to grant permission to API. Make sure you must be logged-in in Google Analytics while doing this.
+
+- After granting permission set analytic cron in Cpanel.
